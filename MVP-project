@@ -1,0 +1,57 @@
+API Web Service Explorer MVP Specification
+
+Project Name: API Web Service Explorer
+Tagline: “A web service that integrates and showcases data from multiple APIs for enhanced user insights.”
+Team Members:
+Name: David Kariuki Nganga
+Role: Lead Developer
+Reason: Responsible for overall architecture and implementation of the web service.
+Name: Marvin Ireri
+Role: API Integration Specialist
+Reason: Focuses on integrating various APIs and handling data retrieval.
+
+Architecture
+My diagram shows how data flows from the frontend (React) through the API server (Node.js/Express.js, Python/Flask), interacts with various APIs (Google Maps, Twitter, GitHub), and is stored in the database (MongoDB/PostgreSQL). This diagram visualizes the system's components and their interactions.
+
+ APIs and Methods
+List the routes and functions for the web client to communicate with the server. Describe how the server will interact with external APIs to fetch and process data, and detail endpoints that other clients can use.
+
+
+ APIs and Methods
+API Routes:
+/api/maps
+GET: Returns location data based on user input using Google Maps API.
+/api/twitter
+GET: Fetches recent tweets based on user-defined parameters using Twitter API.
+/api/github
+GET: Retrieves GitHub repositories or user info using GitHub API.
+Function/Methods:
+FetchDataFromAPI(apiName, params): A function to fetch data from the specified API with parameters.
+3rd Party APIs:
+Google Maps API:
+GET /maps/api/geocode/json: Converts addresses into geographic coordinates.
+Twitter API:
+GET /2/tweets/search/recent: Search for recent tweets based on a query.
+GitHub API:
+GET /users/{username}/repos: List public repositories of a user.
+
+
+
+Data Model
+Explanation: The diagram shows how data is structured and stored.
+    
+ User Stories
+User Stories:
+As a developer, I want to retrieve location data from Google Maps API so that I can view location information on the frontend.
+As a data analyst, I want to see recent tweets related to specific keywords to analyze social media trends.
+As a general user, I want to view public GitHub repositories of a user to explore their projects.
+
+ Mockups
+Mockups Section:
+Homepage: A view showing an overview of data from different APIs.
+Maps View: A map interface displaying location data.
+Tweets View: A list of recent tweets based on search criteria.
+GitHub View: A list of repositories for a specific GitHub user.
+
+
+
